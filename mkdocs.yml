@@ -1,5 +1,5 @@
-site_name: Thesis Documentation
-site_url: https://unfamousthomas.github.io/thesis
+site_name: Fallernetes Documentation
+site_url: https://mirrorstudios.github.io/fallernetes
 theme:
   name: material
   features:
