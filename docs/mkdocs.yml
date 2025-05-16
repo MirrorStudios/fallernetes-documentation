@@ -1,0 +1,26 @@
+site_name: Thesis Documentation
+site_url: https://unfamousthomas.github.io/thesis
+theme:
+  name: material
+  features:
+    - content.code.copy # Enable code-block copying
+    - content.mode.select #Enable selection
+    - content.code.annotate
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Server: server.md
+  - Fleet: fleet.md
+  - GameType: gametype.md
+  - Autoscaler: autoscaler.md
+  - Sidecar: sidecar.md
+  - Service: service.md
+  - Getting Started: started.md
