@@ -7,7 +7,7 @@ A **Fleet** represents a group of servers managed together. Fleets simplify the 
 The manifest for a **Fleet** object looks like this:
 
 ```yaml
-apiVersion: network.unfamousthomas.me/v1alpha1
+apiVersion: gameserver.falloria.com/v1alpha1
 kind: Fleet
 metadata:
   name: fleet-sample
