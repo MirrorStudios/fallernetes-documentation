@@ -9,13 +9,17 @@ It has a **1-to-1 relationship with a pod**, meaning each server corresponds to 
 The manifest for a **Server** object looks like this:
 
 ```yaml
-apiVersion: network.unfamousthomas.me/v1alpha1
+apiVersion: gameserver.falloria.com/v1alpha1
 kind: Server
 metadata:
   labels:
     someLabel: example-label # (1)!
   name: server-sample
 spec:
+  sidecar: # (4)!
+    port: 8085 # (5)!
+    image: "unfamousthomas/fallernetes-sidecar:main" # (6)!
+    logDebug: true # (7)!
   timeout: 5m # (2)!
   allowForceDelete: false # (3)!
   pod:
@@ -37,6 +41,11 @@ spec:
 1. Labels are copied down to the pod.
 2. Time the controller waits before allowing a forced deletion of the server.
 3. Determines if the controller can forcefully delete the server without permission. This would mean that it will not ask the [sidecar](sidecar.md) for permission.
+4. This section is entierely optional, and is used to define some settings for the sidecar
+5. Port defines what port the sidecar expects to accept connections from
+6. If you wish to specify the image used by the sidecar.
+7. To get more logs in the sidecar container.
+
 
 The `spec.pod` sub-object follows the typical Kubernetes pod spec format, allowing you to define multiple containers, volumes, and other pod configurations as necessary.
 

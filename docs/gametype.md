@@ -7,7 +7,7 @@ A **GameType** represents a scalable container for one or more fleets, enabling 
 The manifest for a **GameType** object looks like this:
 
 ```yaml
-apiVersion: network.unfamousthomas.me/v1alpha1
+apiVersion: gameserver.falloria.com/v1alpha1
 kind: GameType
 metadata:
   name: gametype-sample

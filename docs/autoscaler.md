@@ -6,12 +6,12 @@ The **GameAutoscaler** is a resource that periodically triggers a webhook to adj
 
 The manifest for a **GameAutoscaler** object looks like this:
 ```yaml
-apiVersion: network.unfamousthomas.me/v1alpha1
-kind: GameAutoscaler
+apiVersion: gameserver.falloria.com/v1alpha1
+kind: GameTypeAutoscaler
 metadata:
   name: gameautoscaler-sample
 spec:
-  gameName: gametype-sample # (1)!
+  gameTypeName: gametype-sample # (1)!
   policy:
     type: webhook # (2)! 
     webhook: # (3)!
@@ -56,7 +56,7 @@ The webhook should respond with a JSON object indicating whether scaling is requ
 ```json
 {
   "scale": true,
-  "desired_replicas": 10,
+  "desired_replicas": 10
 }
 ```
 If the webhook returns the above, the **GameAutoscaler** will update the **GameType** to have 10 replicas.

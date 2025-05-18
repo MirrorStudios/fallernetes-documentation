@@ -1,7 +1,6 @@
-# Welcome to the Thesis Documentation
+# Welcome to Fallernetes Documentation
 
-This project began as a solution to a problem I encountered during my Computer Science Bachelor's thesis.  
-Its main goal is to enable **game server management on Kubernetes**, allowing **deletion blocking** without adding complex logic to the game servers themselves. Additionally, it supports **custom autoscaling decisions** through **webhooks**.
+This projects main goal is to enable **game server management on Kubernetes**, allowing **deletion blocking** without adding complex logic to the game servers themselves. Additionally, it supports **custom autoscaling decisions** through **webhooks**.
 
 ## About the Documentation
 
