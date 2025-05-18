@@ -10,6 +10,7 @@ The structure is kept intentionally simple:
 - **Right sidebar**: View the subsections of the current page.
 
 Each page covers either:
+
 - A **core part** of the project,
 - **Usage instructions**, or
 - An **architectural decision**, including its consequences and reasoning.
